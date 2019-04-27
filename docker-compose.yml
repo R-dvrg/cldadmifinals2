@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  
+  db:
+      build: ./database
+      environment:
+      - MYSQL_DATABASE=mboardlogin
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=FedUlQ8Hbl5KGxeF
+
+  
+  php:
+    build: ./php
+    ports:
+      - '80:80'
+
+volumes:
+  db:
